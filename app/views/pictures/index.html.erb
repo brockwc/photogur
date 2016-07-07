@@ -1,27 +1,29 @@
 <div id="main-h1">
-  <h1><%= link_to "[+]", "/pictures/new" %> Photogur</h1>
+    <h1><%= link_to "[+]", add_a_new_picture_path %> Photogur</h1>
 </div>
 
 <div class="picture-index">
-<% @pictures.each do |picture| %> 
-  <p id="title"><%= picture[:title] %>,</p> 
-  <p id="artist-name"><%= picture[:artist] %></p>
-  <%= link_to image_tag(picture.url), "pictures/#{picture.id}" %>
-  <hr>
-<% end %>
+    <% @pictures.each do |picture| %>
+        <div class="pic-wrap">
+            <p id="title"><%= picture[:title] %> <span id="artist-name">By <%= picture[:artist] %></span></p>
+            <%= link_to image_tag(picture.url), "pictures/1" %>
+        </div>
+    <% end %>
 </div>
 
-<h1>Most Recent Pictures</h1>
-<ul>
-  <% @most_recent_pictures.each do |picture| %>
-  <li><%= picture.title %></li>
-  <% end %>
-</ul>
+<div class="recent-pictures">
+    <h1>Most Recent Pictures</h1>
+    <ul>
+        <% @most_recent_pictures.each do |picture| %>
+            <li><%= link_to picture.title, show_picture_path %></li>
+        <% end %>
+    </ul>
+</div>
 
 <h1>Pictures over 1 month old: <%= @over_one_month_old.count %></h1>
 
 <ul>
-  <%  @over_one_month_old.each do |picture| %>
-  <li><%= picture.title %></li>
+  <% @over_one_month_old.each do |picture| %>
+      <li><%= picture.title %></li>
   <% end %>
 </ul>
