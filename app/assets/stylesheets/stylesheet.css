@@ -1,0 +1,90 @@
+/* BASE STYLES */
+html {
+  background-color: #404040;
+}
+
+body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1rem;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: #F2EFDC;
+}
+
+a:visited {
+  color: #F24C27;
+}
+
+img {
+  max-width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+/* LAYOUT STYLES */
+
+#main-h1 {
+  position: fixed;
+  margin-top: -4rem;
+  margin-left: 55%;
+  margin-bottom: 5%;
+  padding: 8px;
+  background-color: #024959;
+  color: #F2EFDC;
+  border-radius: 5px;
+  border: 1px dashed #F24C27;
+}
+
+
+.picture-index {
+  margin-top: 10%;
+}
+
+.new-picture {
+  margin-top: 10%;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding: 10px;
+  color: #F2EFDC;
+  text-align: center;
+  background-color: #024959;
+  border-radius: 5px;
+  border: 1px dashed #F24C27;
+}
+
+#title {
+  font-size: 1.5rem;
+  line-height: 0.5rem;
+  text-indent: 7%;
+  color: #F24C27;
+}
+
+#artist-name {
+  font-size: 1rem;
+  line-height: 0.5rem;
+  opacity: 0.8;
+  text-indent: 15%;
+  color: #037E8C;
+}
+
+hr {
+  border: none;
+  background-color: black;
+  height: 1px;
+  width: 30%;
+  margin-bottom: 50px;
+}

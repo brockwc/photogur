@@ -1,0 +1,26 @@
+<div id="main-h1">
+  <h1><%= link_to "[<]", pictures_url %> Add One</h1>
+</div>
+
+<div class="new-picture">
+<%= form_for @picture do |f| %>
+  <p> 
+    <%= f.label "artist" %><br>
+    <%= f.text_field "artist" %>
+  </p>
+
+  <p>
+    <%= f.label "title" %><br>
+    <%= f.text_field "title" %>
+  </p>
+
+  <p>
+    <%= f.label "url" %><br>
+    <%= f.text_field "url" %>
+  </p>
+
+  <p>
+    <%= f.submit "Save" %>
+  </p>
+<% end %>
+</div>
